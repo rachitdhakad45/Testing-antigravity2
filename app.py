@@ -23,7 +23,7 @@ def main():
         return
 
     # Extract webhookUrl and accessToken
-    webhook_url = res_data.get("webhookUrl")
+    webhook_url = res_data.get("webhookUrl") or res_data.get("webhook")
     access_token = res_data.get("accessToken")
     
     if not webhook_url or not access_token:
